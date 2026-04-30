@@ -1,0 +1,159 @@
+body {
+  background: #03050a;
+  color: #dfe6e9;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), #03050a);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  top: 40%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  letter-spacing: -1px;
+}
+
+.btn-main {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 14px 28px;
+  background: #00ff88;
+  color: #000;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  transform: scale(1.08);
+}
+
+/* PROTOCOLOS */
+.protocolos {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.item {
+  background: rgba(255,255,255,0.04);
+  padding: 25px;
+  border-left: 2px solid #00ff88;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+}
+.destaque {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+/* CONTAINER */
+.monitor-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* IMAGEM */
+.monitor-box img {
+  width: 300px; /* 🔥 controla o tamanho */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  animation: flutuar 4s ease-in-out infinite;
+
+  /* sombra + glow */
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6))
+          drop-shadow(0 0 25px rgba(0,255,120,0.5));
+
+  transition: 0.3s;
+}
+
+/* HOVER (efeito premium) */
+.monitor-box img:hover {
+  transform: scale(1.05);
+}
+
+/* LUZ EMBAIXO */
+.monitor-box::after {
+  content: "";
+  position: absolute;
+
+  width: 200px;
+  height: 50px;
+
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(20px);
+}
+
+/* FLUTUAR */
+@keyframes flutuar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.cta h3 {
+    margin-top: 50px;
+    font-size: 1.0rem;
+    color: #ccc;
+}
+.assinatura {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #050505; /* Um preto levemente diferente do fundo principal */
+    border-top: 1px solid #1a1a1a; /* Uma linha bem sutil para separar */
+}
+
+.assinatura p {
+    color: #666; /* Cor cinza discreta */
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    letter-spacing: 1px; /* Espaçamento entre letras para um ar moderno */
+}
+
+/* Se quiser destacar seu nome com o verde que você já usa */
+.assinatura p::after {
+    content: " •";
+    color: #00ff78; 
+}
