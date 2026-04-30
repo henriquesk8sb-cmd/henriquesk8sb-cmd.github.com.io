@@ -91,11 +91,13 @@ body {
   align-items: center;
   width: 100%;
   min-height: 400px;
+  flex-wrap: wrap;
 }
 
 /* IMAGEM */
 .monitor-box img {
-  width: 300px; /* 🔥 controla o tamanho */
+  width: 100%; /* 🔥 controla o tamanho */
+  max-width: 300px;
   height: auto;
   display: block;
   margin: 0 auto;
